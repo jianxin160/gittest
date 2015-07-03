@@ -34,4 +34,16 @@ git status
 9.查看修改文件的差异
 git diff <file>
 
-10.
+9-1.添加（由于前面除了修改几个文件还添加了几个文件）
+9-1git add .
+
+11.提交
+git commit -m "add TableViewController and modify ViewController"
+
+12.推送到远程服务器（github）
+git push
+
+13.取消文件修改（可以修改一个文件，例如TMTableViewController.m）
+git checkout —-git/TMTableViewController.m
+
+14.
