@@ -37,13 +37,17 @@ git diff <file>
 9-1.添加（由于前面除了修改几个文件还添加了几个文件）
 9-1git add .
 
-11.提交
+10.快照（每次提交必须快照，建议使用git stage .而不是使用过期的git add .,commit只会提交快照内容，如果快照后做了修改，commit不会提交）[注意git stage是git add的新版本，不建议使用git add]
+git stage .
+
+11.提交(其实是提交到本地仓库，注意在提交之前必须先进行快照git stage)
 git commit -m "add TableViewController and modify ViewController"
 
 12.推送到远程服务器（github）
 git push
 
-13.取消文件修改（可以修改一个文件，例如TMTableViewController.m）
+13.取消文件修改,恢复到上次stage（可以修改一个文件，例如TMTableViewController.m，然后做git stage）
 git checkout —-git/TMTableViewController.m
 
 14.
+
