@@ -14,6 +14,7 @@
 		91B3B1CE1B44F19C00AFA118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B3B1CD1B44F19C00AFA118 /* Images.xcassets */; };
 		91B3B1D11B44F19C00AFA118 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B3B1CF1B44F19C00AFA118 /* LaunchScreen.xib */; };
 		91B3B1DD1B44F19C00AFA118 /* gitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B3B1DC1B44F19C00AFA118 /* gitTests.m */; };
+		91CB7DD91B45103300BC98AC /* TMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CB7DD81B45103300BC98AC /* TMTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		91B3B1D61B44F19C00AFA118 /* gitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B3B1DB1B44F19C00AFA118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91B3B1DC1B44F19C00AFA118 /* gitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gitTests.m; sourceTree = "<group>"; };
+		91CB7DD71B45103300BC98AC /* TMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTableViewController.h; sourceTree = "<group>"; };
+		91CB7DD81B45103300BC98AC /* TMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				91B3B1CD1B44F19C00AFA118 /* Images.xcassets */,
 				91B3B1CF1B44F19C00AFA118 /* LaunchScreen.xib */,
 				91B3B1C01B44F19C00AFA118 /* Supporting Files */,
+				91CB7DD71B45103300BC98AC /* TMTableViewController.h */,
+				91CB7DD81B45103300BC98AC /* TMTableViewController.m */,
 			);
 			path = git;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				91B3B1C91B44F19C00AFA118 /* ViewController.m in Sources */,
 				91B3B1C61B44F19C00AFA118 /* AppDelegate.m in Sources */,
+				91CB7DD91B45103300BC98AC /* TMTableViewController.m in Sources */,
 				91B3B1C31B44F19C00AFA118 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +424,7 @@
 				91B3B1E21B44F19C00AFA118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91B3B1E31B44F19C00AFA118 /* Build configuration list for PBXNativeTarget "gitTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				91B3B1E51B44F19C00AFA118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
