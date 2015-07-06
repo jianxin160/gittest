@@ -23,7 +23,7 @@
 	[super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableView代理
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 0;
