@@ -46,8 +46,14 @@ git commit -m "add TableViewController and modify ViewController"
 12.推送到远程服务器（github）
 git push
 
-13.取消文件修改,恢复到上次stage（可以修改一个文件，例如TMTableViewController.m，然后做git stage）
+13.取消文件修改（还没有stage或者还没有commit，撤销未提交的修改）（可以修改一个文件，例如TMTableViewController.m，可以做git stage,也可以不做git stage，但是不能做commit）
+git reset --hard HEAD
+
+
+14.取消文件修改,恢复到上次stage（撤销stage未提交的修改）（可以修改一个文件，例如TMTableViewController.m，然后做git stage,但是不能做commit，并且stage如果指定了某个文件，那么checkout必须是某个文件）
 git checkout —-git/TMTableViewController.m
 
-14.
+15.取消文件修改，恢复到上一次commit（撤销commit后的修改）（可以修改一个文件，例如TMTableViewController.m，然后做git stage,做git commit，下面的命令将恢复到最近一次提交，上上次的使用git revert HEAD^）
+git revert HEAD
+
 
