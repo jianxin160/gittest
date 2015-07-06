@@ -13,7 +13,6 @@
 
 @end
 
-
 @implementation TMTableViewController
 
 - (void)viewDidLoad {
@@ -24,7 +23,7 @@
 	[super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableView 代理方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 0;
