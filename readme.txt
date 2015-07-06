@@ -56,4 +56,10 @@ git checkout —-git/TMTableViewController.m
 15.取消文件修改，恢复到上一次commit（撤销commit后的修改）（可以修改一个文件，例如TMTableViewController.m，然后做git stage,做git commit，下面的命令将恢复到最近一次提交，上上次的使用git revert HEAD^）
 git revert HEAD
 
+16.创建并切换分支(下面创建了一个dev分支并切换到dev分支中，下面的命令等于git branch dev[创建分支]和git checkout dev[切换分支]两句)
+git checkout -b dev
+
+17.查看分支
+git branch
+
 
