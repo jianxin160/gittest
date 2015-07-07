@@ -59,7 +59,56 @@ git revert HEAD
 16.创建并切换分支(下面创建了一个dev分支并切换到dev分支中，下面的命令等于git branch dev[创建分支]和git checkout dev[切换分支]两句)
 git checkout -b dev
 
-17.查看分支
+17.查看分支(本地分支，可以使用git branch -r查看远程分支情况)
 git branch
+
+18.推送分支到远程服务器（在此之前可以修改一部分内容提交，由于第一次推送此分支需要加上相应参数-u origin dev）
+git push -u origin dev
+
+19.合并分支（例如在dev分支修改了TMTableViewController.m并且提交、推送到远程服务器;切换会master时如果有没有提交的修改可以暂存，使用git stash）[下面的命令执行之后可以git push推送到远程服务器]
+git merge dev
+
+20.删除分支dev（从本地仓库）
+git branch -d dev
+
+21.删除远程分支（类似的删除远程tag git push origin —tag <tagname>）[其实也可以推送一个空分支，就相当于删除远程分支 git push origin:dev]
+git push origin --delete dev
+
+22.获取远程分支（例如本地已删除但是没有删除远程分支，下面第二句命令第一dev是本地分支名称，第二个是远程分支名称，通过命令进行映射，这样查看就会发现本地多了一个dev分支）
+git fetch origin dev
+git checkout -b dev origin/dev
+
+23.从远程分支克隆文件到本地(下面的命令是克隆每个分支到本地，如果不加参数-b dev就是克隆主分支到本地,一般会在主分支文件夹再创建一个文件夹作为分支文件)[注意运行下面的命令之前先在一个文件夹做初始化，不要放到主分支文件夹内，cd到新建文件夹在执行如下命令]
+git init
+git add .
+git commit
+git clone -b dev https://github.com/jianxin160/gittest.git
+
+24.提交分支修改并推送到远程（注意cd到分支下再提交、推送）
+git stage .
+git commit -m “modify tableViewController.m”
+git push
+
+25.合并分支并提交（先cd到主分支目录下）
+git checkout master
+git pull
+git merge dev
+git push
+
+26.衍合（前面使用了合并merge，其实合并还能使用衍合，区别就是合并是确实产生了合并后的新版本，衍合没有产生新节点只是会以补丁形式存在，二者选择原则：变化较多使用merge，只需要解决一次冲突；变化较少使用rebase需要多次解决冲突，但是合并是线性的比较整洁）【下面的例子可以先在两个分支master和dev上分别修改123.rtf，并且分别提交、推送，再到dev分支下执行rebase，如果发生冲突需求修改冲突然后git add 123.rtf 最好执行git rebase —-continue和git rebase —-skip跳过】
+git rebase origin/master
+
+27.合并master（再次到master，执行合并）
+git merge dev
+
+28.解决冲突(发生冲突后只要修改对应文件删除<<<等然后正常提交、推送即可)
+git add 123.rtf
+git commit -m “modify 123.rtf”
+git push
+
+
+
+
+
 
 
